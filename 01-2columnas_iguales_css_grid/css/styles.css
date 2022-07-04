@@ -39,3 +39,12 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+/* Como en dispositivos pequeños los artuculos se ven bien hacia abajo aplicaremos un media querie solo para dispositivos mas grandes y poner el contenido en dos columnas iguales para esto hay que recordar que para aplicar tanto css grid como flexbox hay que hacerlo sobre el elemnto padre de los elementos que se requieran posicionar */
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
