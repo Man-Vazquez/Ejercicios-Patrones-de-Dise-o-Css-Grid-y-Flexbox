@@ -49,3 +49,40 @@ p {
 
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .contenedor-grid {
+        display: grid;
+        /* Checar para hacer esto mismo grid template areas para dibujar sencillo el layout */
+        grid-template-columns: 20% 60% 20%;
+        /* Con el grid auto flow el flujo se va a acomodar en las columnas */
+        grid-auto-flow: column;
+        column-gap: 2rem;
+    }
+
+    .contenido-principal {
+        grid-column: 2 / 3;
+    }
+
+    .sidebar-1 {
+        grid-column: 1 / 2;
+    }
+}
+
+/* Ejemplo de solucion 2 */
+
+/* 
+@media (min-width: 768px) {
+    .contenedor-grid {
+        display: grid;
+        /* Checar para hacer esto mismo grid template areas para dibujar sencillo el layout */
+        /*grid-template-areas: "izquierda contenedor derecha";
+        grid-template-columns: 20% 60% 20%;
+        column-gap: 2rem;
+    }
+
+    .contenido-principal {
+        grid-area: contenedor;
+    }
+}
+
+*/
